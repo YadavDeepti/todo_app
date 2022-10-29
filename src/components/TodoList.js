@@ -5,7 +5,7 @@ function TodoList(props) {
  
   return (
     <div>
-       <li> {props.item} <button onClick={props.handleEdit}>Edit</button>
+       <li> {props.item} <button onClick={() => {props.edit(props.id)}}>Edit</button>
                                     <button onClick={() =>{
                                       props.onSelect(props.id)
                                     }}>
@@ -14,5 +14,5 @@ function TodoList(props) {
   )
 }
 
-export default TodoList
+export default TodoList;
 
