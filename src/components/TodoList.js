@@ -5,11 +5,12 @@ function TodoList(props) {
  
   return (
     <div>
-       <li> {props.item} <button onClick={() => {props.edit(props.id)}}>Edit</button>
-                                    <button onClick={() =>{
+       <li className='li-list'> {props.item} <div>
+       <button className='button' onClick={() => {props.edit(props.id)}}>Edit</button>
+                                    <button className = 'button' onClick={() =>{
                                       props.onSelect(props.id)
                                     }}>
-                                      Delete</button> </li>
+                                      Delete</button></div> </li>
     </div>
   )
 }

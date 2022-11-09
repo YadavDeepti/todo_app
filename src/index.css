@@ -7,10 +7,79 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+*{
+  margin:0;
+  padding:0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.background{
+  background-color: #c4dfe6;
+  height: 100vh;
+}
+
+.heading{
+  padding: 40px;
+  font-size: 60px;
+  color: #003b46;
+}
+
 .strike{
   text-decoration: line-through;
+}
+.li-list{
+  list-style: none;
+  width: 600px;
+  height: 40px;
+  background-color: #66a5ad;
+  margin: 10px;
+  padding: 0 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
+
+}
+
+.ul-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.button{
+  background-color: #1995ad;
+  margin: 0 5px;
+  width: 80px;
+  padding: 4px;
+  border: none ;
+  border-radius: 5px;
+  
+}
+
+.button:hover{
+  border: 1px solid #003b46;
+  cursor: pointer;
+}
+
+.input{
+ height: 30px;
+  width: 500px;
+  background-color: transparent;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  
+}
+
+.input:focus{
+  outline: none;
 }

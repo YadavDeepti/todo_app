@@ -64,22 +64,25 @@ function App() {
 
 
   return (
-      <div className="App">
-      <h1>To-Do App</h1>
-   
-      <form className="todoForm" >
-          <input type="text"  placeholder="Add a task" value={todo} onChange={addTask} />
-            { toggle ? <button type="submit" onClick={handleSubmit}>Add</button> 
-            : <button type="submit" onClick={handleSubmit}>Edit</button>} 
+      <div className="App background">
+      <h1 className='heading'>To-Do App</h1>
+      
+      <form className="todoForm " >
+          <input className='input' type="text"  placeholder="Add a task" value={todo} onChange={addTask} />
+            { toggle ? <button className='button' type="submit" onClick={handleSubmit}>Add</button> 
+            : <button className='button' type="submit" onClick={handleSubmit}>Edit</button>} 
       </form>
-      <ul>
+      
+      
+      <ul className='ul-list'>
                {/*todo*/}
               {todoList.map((task) => {
                 return <TodoList key={task.id} id={task.id} item={task.name} onSelect={handleDelete} edit={handleEdit}/>  
               })}
         </ul>
         <div>
-           <button onClick={deleteAll}>Delete All</button> 
+          {todoList.length !== 0  ? <button className='button' onClick={deleteAll}>Delete All</button> : "" }
+            
         </div>
     </div>
     
